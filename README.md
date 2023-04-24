@@ -19,5 +19,6 @@ AssistActivity代码当中存在明显的Intent重定向漏洞：
     }
  ```
  对比微博的分享Activity，早期虽然也有重定向漏洞，但是后来做了入参净化，避免了集成sdk应用无意识导出产生的安全风险。  
+ 除此之外，LaunchAnyWhere漏洞往往和AssistActivity结合使用，导致集成了这个activity的应用数据泄露或者被注入恶意代码。  
  建议微信修复一下，不然这个锅总是甩不到合适的地方。
  
